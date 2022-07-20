@@ -5,7 +5,7 @@ function App() {
        <>
           <header/>
           <main>
-                <h2>Home</h2>
+                <h2>Mi Feria Home</h2>
           </main>
           <footer>
                <p>footer</p>
