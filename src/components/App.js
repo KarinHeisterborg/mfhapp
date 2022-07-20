@@ -3,7 +3,7 @@ import Navbar from './NavBar';
 function App() {
   return (
        <>
-          <header/>
+          <Navbar/>
           <main>
                 <h2>Mi Feria Home</h2>
           </main>
