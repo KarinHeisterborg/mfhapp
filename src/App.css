@@ -31,11 +31,12 @@
   }
 }
 
-.titulo-h1 {
+h1.titulo {
   font-family: sans-serif;
   font-size: 35px;
   color: aqua;
 }
 footer {
 font-size: 30px;
+color: yellowgreen;
 }
