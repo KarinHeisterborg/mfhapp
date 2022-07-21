@@ -21,7 +21,7 @@ footer {
 font-size: 30px;
 color: yellowgreen;
 }
-header {
+#header {
   display: flex;
   justify-content: space-between;
   padding: 0.5rem 1rem;
