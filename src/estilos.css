@@ -11,3 +11,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+h1.titulo {
+  font-family: sans-serif;
+  font-size: 35px;
+  color: aqua;
+}
+footer {
+font-size: 30px;
+color: yellowgreen;
+}
