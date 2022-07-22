@@ -1,6 +1,6 @@
 function NavBar() {
           return (
-              <header id="header">
+              <header id="navBar">
                   <h1 className="titulo" >Mi Feria Home</h1>
                   <nav>
                       <a href="#">link</a>

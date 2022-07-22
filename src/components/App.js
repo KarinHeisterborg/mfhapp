@@ -3,7 +3,7 @@ import Navbar from './NavBar';
 function App() {
   return (
        <>
-          <Navbar/>
+          <NavBar/>
          
           <footer>
                <p>footer</p>
