@@ -27,6 +27,7 @@ color: yellowgreen;
   padding: 0.5rem 1rem;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
   align-items: center;
+  background-color: rgb(250, 251, 223);
 }
 .img {
   size: 100px;

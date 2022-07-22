@@ -2,7 +2,7 @@ import Image from 'react-bootstrap/Image'
 const CartWidget  = () =>{
           return(
                     <Image
-                    src="/logo.png"
+                    src="/logo7.png"
                     rounded
                   />  
           )
