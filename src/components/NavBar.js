@@ -1,3 +1,4 @@
+import CartWidget from "./CartWidget"
 function NavBar() {
           return (
               <header id="heather">
