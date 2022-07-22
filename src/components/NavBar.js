@@ -1,6 +1,7 @@
 function NavBar() {
           return (
-              <header id="navBar">
+              <header id="heather">
+                  <CartWidget/>
                   <h1 className="titulo" >Mi Feria Home</h1>
                   <nav>
                       <a href="#">link</a>
