@@ -1,6 +1,12 @@
+import ItemCount from "./ItemCount"
+
 const ItemListContainer = ({ greeting }) => {
           return(
-              <p>{greeting}</p>
+                <> 
+                <ItemCount/>
+                <p>{greeting}</p>
+                </>
+              
           )
 }
 export default ItemListContainer 
