@@ -19,7 +19,7 @@ code {
 }
 footer {
 font-size: 30px;
-color: yellowgreen;
+color: rebeccapurple;
 }
 #heather {
   display: flex;
@@ -28,4 +28,14 @@ color: yellowgreen;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
   align-items: center;
   background-color: rgb(250, 251, 223);
+}
+.counterContainer {
+  display: flex!important;
+  justify-content: center;
+  align-items: center;
+ 
+}
+.greetingStyle {
+  display: flex!important;
+  justify-content: center;
 }

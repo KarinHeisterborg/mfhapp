@@ -4,7 +4,7 @@ const ItemListContainer = ({ greeting }) => {
           return(
                 <> 
                 <ItemCount/>
-                <p>{greeting}</p>
+                <p className="greetingStyle">{greeting}</p>
                 </>
               
           )

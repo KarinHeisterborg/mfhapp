@@ -5,7 +5,7 @@ function App() {
   return (
        <>
           <Navbar/>
-          <ItemListContainer greeting="HOLA"/>
+          <ItemListContainer greeting="Producto x"/>
           <footer>
                <p>footer</p>
           </footer>

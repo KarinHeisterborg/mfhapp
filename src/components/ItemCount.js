@@ -1,33 +1,34 @@
 
+import React, { useState } from 'react';
+const ItemCount = ()=> {
 
-const ItemCount = ({add, substract, counter, stock, resetCounter })=> {
-
-          const [counter, setCounter] = useState(0)
+          const [counter, setCounter] = useState(1)
 
           const add = () => {
 
-                    if (counter < stock ){
+                    if (counter < 5 ){
                         setCounter(counter+1)
                     }
           }
 
           const substract = () => {
 
-                    if (counter > initial ){
+                    if (counter > 1 ){
                         setCounter(counter-1)
                     }
           }    
 
           const resetCounter = () => {
-                    setContador(0)
+                    setCounter(1)
                 }
 
           return (
-                    <>
-                    <button onClick={add}>click</button>
-                    <button onClick={resetCounter}>click</button>
-                    <button onClick={substract}>click</button>
-                    </> 
+                    <div className='counterContainer'>
+                    <button onClick={substract}>-</button><br/>
+                    <h3>{counter}</h3>
+                    <button onClick={add}>+</button>
+                    <button onClick={resetCounter}>Reset</button>
+                    </div> 
           )
 }
 export default ItemCount
