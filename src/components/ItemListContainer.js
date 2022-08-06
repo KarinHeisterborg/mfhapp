@@ -5,17 +5,17 @@ import ItemList from "./ItemList";
 
 
 const ItemListContainer = ({ greeting }) => {
-      console.log (productos)
+     
      // const [counter, setCounter] = useState(1)
      // let [cantSeleccionada,setCantSeleccionada] = useState(0)
 const[listProducts, setListProducts] = useState([])
 const[loading, setLoading] = useState(true)
 
 
-const onAdd = () => {
-            console.log("On Add")
+//const onAdd = () => {
+  //          console.log("On Add")
             
-}
+
 
 useEffect(() => {
       const pedido = new Promise((resolve, reject) => {
@@ -43,8 +43,8 @@ if (loading){
                 </>
           )
 }
-               
-}
-//   <ItemCount stock="5" initial="1" onAdd={onAdd}/>
+              
 
+//   <ItemCount stock="5" initial="1" onAdd={onAdd}/>
+}
 export default ItemListContainer 
