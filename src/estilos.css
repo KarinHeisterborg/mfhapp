@@ -19,7 +19,7 @@ code {
 }
 footer {
 font-size: 30px;
-color: rgb(79, 252, 99);
+color: rgb(60, 44, 160);
 }
 #heather {
   display: flex;
@@ -27,8 +27,9 @@ color: rgb(79, 252, 99);
   padding: 0.5rem 1rem;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
   align-items: center;
-  background-color: rgb(126, 17, 56);
+  background-color: rgb(43, 49, 47);
 }
+
 /*
 .counterContainer {
   display: flex!important;
@@ -40,4 +41,17 @@ color: rgb(79, 252, 99);
 .greetingStyle {
   display: flex!important;
   justify-content: center;
+}
+
+div.btn-group {
+  display: flex;
+  margin-left: 300px;
+  margin-right: 300px;
+}
+.agregar.btn.btn-primary.btn-lg{
+  margin-left: 50%;
+  margin-right: 30%;
+  display: flex!important;
+  justify-content: center;
+  align-items: center;
 }

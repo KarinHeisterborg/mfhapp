@@ -1,4 +1,5 @@
 import Button from 'react-bootstrap/Button';
+import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import React, { useState } from 'react';
 const ItemCount = ({initial, stock, onAdd})=> {
 
@@ -24,16 +25,17 @@ const ItemCount = ({initial, stock, onAdd})=> {
                     onAdd(counter)
                 }      
           return (
-                    <div className='contadorProductos'>
-                    <div className='contSumaResta'>
-                    <button  className='btnResta' onClick={substract}>-</button><br/>
-                    <input value={counter} ></input>
-                    <button className='btnSuma' onClick={add}>+</button>
-                    <button onClick={resetCounter}>Reset</button>
-                    </div>
-                    <button className='btn btn-outline-primary mt-2 w-100 btnAgregar' onClick={addToCart}>AGREGAR</button>
+                    <div className='counterContainer'>
+                    <ButtonGroup aria-label="Basic example">
+                    <Button  variant="primary" size="sm" active onClick={substract}>-</Button><br/>
+                    <input value={counter}></input>
+                    <Button variant="primary" size="sm" active onClick={add}>+</Button>
+                    <Button variant="primary" size="sm" onClick={resetCounter}>Reset</Button>
+                    </ButtonGroup>
+                    <Button className='agregar' variant="primary" size="lg" onClick={addToCart}>AGREGAR</Button>
                     </div> 
                     
           ) 
+
 }
 export default ItemCount
