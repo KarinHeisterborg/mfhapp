@@ -4,7 +4,7 @@ const Item = ({producto}) => {
   return (
     <>
     <h2>{producto.name}</h2>
-    <img src={producto.image}/>
+    <img alt="product" src={producto.img}/>
     <h2>Precio: ${producto.precio}</h2> 
     <h3>{producto.detalle}</h3>
     </>
