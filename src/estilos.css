@@ -14,12 +14,12 @@ code {
 .titulo {
   font-family: sans-serif;
   font-size: 35px;
-  color: aqua;
+  color: rgb(184, 224, 224);
   display: flex;
 }
 footer {
 font-size: 30px;
-color: rgb(60, 44, 160);
+color: rgb(188, 185, 208);
 }
 #heather {
   display: flex;
@@ -27,7 +27,7 @@ color: rgb(60, 44, 160);
   padding: 0.5rem 1rem;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
   align-items: center;
-  background-color: rgb(43, 49, 47);
+  background-color: rgb(119, 210, 180);
 }
 
 /*

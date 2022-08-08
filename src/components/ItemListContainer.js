@@ -28,7 +28,7 @@ useEffect(() => {
             setListProducts(listProducts)
             setLoading(false)
       })
-
+console.log(pedido)
 }, []);
 
 if (loading){
@@ -36,6 +36,7 @@ if (loading){
             <p>Cargando...</p>
       )
 }else{
+     
       return(
                 <> 
                 <ItemList listProducts={listProducts}/>

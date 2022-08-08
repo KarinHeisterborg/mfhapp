@@ -1,10 +1,12 @@
-const Item = ({productos}) => {
+const Item = ({producto}) => {
+  console.log(producto)
+
   return (
     <>
-    <h2>{productos.name}</h2>
-    <img src={productos.image}/>
-    <h2>Precio: ${productos.precio}</h2> 
-    <h3>{productos.detalle}</h3>
+    <h2>{producto.name}</h2>
+    <img src={producto.image}/>
+    <h2>Precio: ${producto.precio}</h2> 
+    <h3>{producto.detalle}</h3>
     </>
   )
 }
