@@ -38,10 +38,10 @@ if (loading){
 }else{
      
       return(
-                <> 
+                <div className="divtarjetas"> 
                 <ItemList listProducts={listProducts}/>
                 <p className="greetingStyle">{greeting}</p>
-                </>
+                </div>
           )
 }
               
