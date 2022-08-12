@@ -2,7 +2,10 @@ import ItemCount from "./ItemCount"
 import React, { useState, useEffect } from 'react';
 import {productos} from '../assets/productos';
 import ItemList from "./ItemList";
-
+import CustomFetch from "../assets/CustomFetch";
+import {useParams} from "react-router-dom"
+import { LinearProgress } from '@mui/material'
+import item from "./Item"
 
 const ItemListContainer = ({ greeting }) => {
      
@@ -10,7 +13,7 @@ const ItemListContainer = ({ greeting }) => {
      // let [cantSeleccionada,setCantSeleccionada] = useState(0)
 const[listProducts, setListProducts] = useState([])
 const[loading, setLoading] = useState(true)
-
+const {id} = useParams()
 
 //const onAdd = () => {
   //          console.log("On Add")
@@ -18,34 +21,31 @@ const[loading, setLoading] = useState(true)
 
 
 useEffect(() => {
-      const pedido = new Promise((resolve, reject) => {
-            setTimeout (()=>{
-                  resolve (productos)
-            }, 2000)
+      
+      CustomFetch (productos)
+      .then(data=>{
+              setLoading(false)
+              if (id){
+                  setListProducts(data.filter(item.category===id))
+              }
+              else {
+                  setListProducts(data)
+              }
       })
+   
+   },[id])
 
-      pedido.then((listProducts)=>{
-            setListProducts(listProducts)
-            setLoading(false)
-      })
-console.log(pedido)
-}, []);
-
-if (loading){
-      return (
-            <p>Cargando...</p>
-      )
-}else{
-     
       return(
                 <div className="divtarjetas"> 
-                <ItemList listProducts={listProducts}/>
                 <p className="greetingStyle">{greeting}</p>
+                {!loading && <LinearProgress/>}
+                {loading && <ItemList listProducts={listProducts}/>}
+
                 </div>
           )
 }
               
 
 //   <ItemCount stock="5" initial="1" onAdd={onAdd}/>
-}
+
 export default ItemListContainer 

@@ -1,40 +1,36 @@
-
+import Item from "./Item";
 import ItemDetail from "./ItemDetail"
 import { productos } from "../assets/productos"
 import React, { useState, useEffect } from 'react';
+import CustomFetch from "../assets/CustomFetch";
+import { LinearProgress } from '@mui/material'
+import {useParams} from "react-router-dom"
+import ItemCount from "./ItemCount";
 
 const ItemDetailContainer = () => {
 
 const[listProducts, setListProducts] = useState([])
 const[loading, setLoading] = useState(true)     
-
+const{id}= useParams()
   
           useEffect(() => {
-                    const GetItem = () => {
-                             return new Promise((resolve, reject) => {
-                          setTimeout (() =>{
-                                resolve (productos)
-                          }, 2000)
-                    })
-               }
-               GetItem()
-               .then((listProducts)=>{
-
-
-               setListProducts (listProducts[3])
-               setLoading(false)
-                    })
-              }, []);
-           
-              if (loading){
-                    return (
-                          <p>Cargando...</p>
-                    )
-              }else{
-                   
-                    return(
-    <div><ItemDetail listProducts= {listProducts} /></div>
-  )}
- 
+            CustomFetch (productos)
+            .then (data => {
+                  setListProducts(data.find (Item => Item.id===id))
+                  setLoading(false)
+            })
+      }, [id]);   
+return (
+      <>
+        { 
+        loading?
+        <ItemDetail listProducts= {listProducts} />
+        :
+        <div><LinearProgress/></div>
+      
+        }
+      </>  
+      )
+              
 }
 export default ItemDetailContainer   

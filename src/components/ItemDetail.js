@@ -1,13 +1,14 @@
-import { productos } from "../assets/productos"
-const ItemDetail = (producto)  => {
+import Card from '@mui/material/Card';
+
+const ItemDetail = ({listProducts})  => {
   return (
    
-          <div>
-          <h2>{producto.name}</h2>
-          <img alt="product" src={producto.img}/>
-          <h2>Precio: ${producto.precio}</h2> 
-          <h3>{producto.descripcion}</h3>
-          </div>
+          <Card>
+          <h2>{listProducts.name}</h2>
+          <img alt="product" src={listProducts.img}/>
+          <h2>Precio: ${listProducts.precio}</h2> 
+          <h3>{listProducts.descripcion}</h3>
+          </Card>
         )
   
 }
